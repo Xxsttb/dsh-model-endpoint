@@ -5,6 +5,9 @@
   "type": "module",
   "description": "Publishes the model this DeepSeek Harness profile is using as an OpenAI-compatible HTTP endpoint, bound to a configurable LAN or public address.",
   "main": "lib/index.js",
+  "scripts": {
+    "test": "node --test"
+  },
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
@@ -16,6 +19,8 @@
   "files": [
     "lib/index.js",
     "lib/client.js",
+    "lib/openai-content.js",
+    "lib/openai-images.js",
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
@@ -43,13 +48,14 @@
       ]
     },
     "engines": {
-      "dsh": ">=0.2.0-rc.2"
+      "dsh": ">=0.2.1-rc.2"
     }
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "~4.0.4",
     "@deepseek-ai/schemastery": "~3.18.4",
     "@deepseek-ai/dsh-llm": ">=0.2.0-rc.2",
+    "@deepseek-ai/dsh-attachment": ">=0.2.1-rc.2",
     "@deepseek-ai/dsh-client-locale": ">=0.2.0-rc.2",
     "@deepseek-ai/dsh-client-ui-settings": ">=0.2.0-rc.2",
     "react": "^18.2.0"
